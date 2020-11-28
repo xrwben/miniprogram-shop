@@ -48,5 +48,24 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "appid": "wxc0a7000b7f275a8e",
-  "condition": {}
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

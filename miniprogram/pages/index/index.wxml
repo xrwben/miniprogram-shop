@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,7 +7,77 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+</view> -->
+<!-- 顶部banner -->
+<view class="banner-container">
+  <image class="banner-item" src="../../static/home/banner.jpg" mode="scaleToFill"></image>
+</view>
+<!-- 标签 -->
+<view class="label-container">
+  <view class="label-item">
+    <image class="icon" src="../../static/home/icon-nczg.png"></image>
+    <text class="txt">农场直供</text>
   </view>
+  <view class="label-item">
+    <image class="icon" src="../../static/home/icon-ygpk.png"></image>
+    <text class="txt">严格品控</text>
+  </view>
+  <view class="label-item">
+    <image class="icon" src="../../static/home/icon-wysh.png"></image>
+    <text class="txt">无忧售后</text>
+  </view>
+</view>
+<!-- 本期推荐 -->
+<view class="module-recommend">
+  <view class="title">本期推荐</view>
+  <swiper class="swiper-container" previous-margin="30rpx" next-margin="30rpx">
+    <swiper-item class="swiper-item" wx:for="{{recommendList}}" wx:key="index">
+      <image class="pic" src="{{ item.pic }}"></image>
+      <view class="info">
+        <view class="lf-block">
+          <view class="des">"{{ item.des }}"</view>
+          <view class="name">{{ item.title }}</view>
+          <view class="price">{{ item.score }}积分(价值￥{{ item.price }})</view>
+        </view>
+        <view class="rg-block">
+          <view class="num">
+            <text>今日剩余：</text>
+            <text>{{ item.num }}</text>
+          </view>
+          <view class="btn-exchange">立即兑换</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 下期预告 -->
+<view class="module-next">
+  <view class="title">下期预告</view>
+  <view class="next-container">
+    <image class="pic" src="../../static/home/next-img.png"></image>
+    <view class="info">
+      <view class="name">新疆库尔勒香梨</view>
+      <view class="publish">发布时间</view>
+      <view class="time">
+        <text>7</text>月<text>18</text>日<text>11</text>点<text>00</text>分
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 往期水果 -->
+<view class="module-past">
+  <view class="title">往期水果</view>
+  <view class="past-container">
+    <view class="list-con">
+      <view class="list-item" wx:for="{{ pastList }}" wx:key="index">
+        <view class="name">{{ item.title }}</view>
+        <view class="date">{{ item.date }}</view>
+        <image class="pic" src="{{ item.pic }}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- footer -->
+<view class="footer">
+  <image class="footer-img" src="../../static/home/footer.png"></image>
 </view>

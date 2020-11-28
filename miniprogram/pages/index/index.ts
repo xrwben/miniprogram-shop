@@ -1,10 +1,22 @@
-// index.ts
 // 获取应用实例
 const app = getApp<IAppOption>()
 
 Page({
   data: {
-    motto: 'Hello World',
+    recommendList: [
+      { title: '北京平谷大红桃', des: '空气里都是甜甜的红桃香气', num: 500, score: 500, price: 80, pic: '../../static/home/recommend_1.png' },
+      { title: '北京平谷大红桃', des: '空气里都是甜甜的红桃香气', num: 500, score: 500, price: 80, pic: '../../static/home/recommend_1.png' },
+      { title: '北京平谷大红桃', des: '空气里都是甜甜的红桃香气', num: 500, score: 500, price: 80, pic: '../../static/home/recommend_1.png' },
+      { title: '北京平谷大红桃', des: '空气里都是甜甜的红桃香气', num: 50, score: 500, price: 80, pic: '../../static/home/recommend_1.png' }
+    ],
+    pastList: [
+      { title: '寻乌脐橙', date: '8.1-8.20', pic: '../../static/home/past-img-1.png' },
+      { title: '乌江草莓', date: '8.1-8.20', pic: '../../static/home/past-img-2.png' },
+      { title: '浙江乌梅', date: '8.1-8.20', pic: '../../static/home/past-img-3.png' },
+      { title: '广西猕猴桃', date: '8.1-8.20', pic: '../../static/home/past-img-4.png' },
+      { title: '湖南葡萄', date: '8.1-8.20', pic: '../../static/home/past-img-5.png' },
+      { title: '广东荔枝', date: '8.1-8.20', pic: '../../static/home/past-img-6.png' }
+    ],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
