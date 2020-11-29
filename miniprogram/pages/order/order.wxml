@@ -1,2 +1,30 @@
-<!--miniprogram/pages/order.wxml-->
-<text>miniprogram/pages/order.wxml</text>
+<!-- tab -->
+<view class="order-tab">
+  <view class="{{ currentTab==='all' ? 'active' : '' }}" data-tab="all" bindtap="changeTab">全部</view>
+  <view class="{{ currentTab==='unsend' ? 'active' : '' }}" data-tab="unsend" bindtap="changeTab">待发货</view>
+  <view class="{{ currentTab==='sended' ? 'active' : '' }}" data-tab="sended" bindtap="changeTab">已发货</view>
+</view>
+<!-- 订单列表 -->
+<scroll-view class="order-list"
+  scroll-y="true"
+  refresher-enabled="true"
+  refresher-threshold="100"
+  refresher-default-style="white"
+  refresher-background="#eee"
+  refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="pullFresh">
+  <view class="order-con" wx:for="{{ orderList }}" wx:key="index">
+    <view class="info">
+      <image class="img" src="{{ item.pic }}"></image>
+      <view class="des">
+        <view class="name">{{ item.name }}</view>
+        <view class="price"><text>{{ item.price }}</text> 积分</view>
+        <view class="num">x {{item.num }}</view>
+      </view>
+    </view>
+    <view class="state">
+      <text>状态：{{ item.status }}</text>
+      <text>合计：￥{{ item.price * item.num }}</text>
+    </view>
+  </view>
+</scroll-view>

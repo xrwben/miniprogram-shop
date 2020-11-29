@@ -1,66 +1,28 @@
-// miniprogram/pages/order.js
+"use strict";
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+    data: {
+        currentTab: 'all',
+        triggered: false,
+        orderList: [
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
+            { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' }
+        ]
+    },
+    changeTab: function (e) {
+        this.setData({
+            currentTab: e.target.dataset.tab
+        });
+    },
+    pullFresh: function (e) {
+        console.log("下拉>>>", e);
+        this.setData({
+            triggered: true
+        });
+    }
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoib3JkZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJvcmRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsSUFBSSxDQUFDO0lBQ0gsSUFBSSxFQUFFO1FBQ0osVUFBVSxFQUFFLEtBQUs7UUFDakIsU0FBUyxFQUFFLEtBQUs7UUFDaEIsU0FBUyxFQUFFO1lBQ1QsRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxrQ0FBa0MsRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxDQUFDLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLEVBQUUsS0FBSyxFQUFFO1lBQy9HLEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxHQUFHLEVBQUUsa0NBQWtDLEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxHQUFHLEVBQUUsQ0FBQyxFQUFFLEtBQUssRUFBRSxNQUFNLEVBQUUsTUFBTSxFQUFFLEtBQUssRUFBRTtZQUMvRyxFQUFFLElBQUksRUFBRSxPQUFPLEVBQUUsR0FBRyxFQUFFLGtDQUFrQyxFQUFFLElBQUksRUFBRSxPQUFPLEVBQUUsR0FBRyxFQUFFLENBQUMsRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLE1BQU0sRUFBRSxLQUFLLEVBQUU7WUFDL0csRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxrQ0FBa0MsRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxDQUFDLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLEVBQUUsS0FBSyxFQUFFO1lBQy9HLEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxHQUFHLEVBQUUsa0NBQWtDLEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxHQUFHLEVBQUUsQ0FBQyxFQUFFLEtBQUssRUFBRSxNQUFNLEVBQUUsTUFBTSxFQUFFLEtBQUssRUFBRTtZQUMvRyxFQUFFLElBQUksRUFBRSxPQUFPLEVBQUUsR0FBRyxFQUFFLGtDQUFrQyxFQUFFLElBQUksRUFBRSxPQUFPLEVBQUUsR0FBRyxFQUFFLENBQUMsRUFBRSxLQUFLLEVBQUUsTUFBTSxFQUFFLE1BQU0sRUFBRSxLQUFLLEVBQUU7WUFDL0csRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxrQ0FBa0MsRUFBRSxJQUFJLEVBQUUsT0FBTyxFQUFFLEdBQUcsRUFBRSxDQUFDLEVBQUUsS0FBSyxFQUFFLE1BQU0sRUFBRSxNQUFNLEVBQUUsS0FBSyxFQUFFO1NBQ2hIO0tBQ0Y7SUFFRCxTQUFTLFlBQUMsQ0FBTTtRQUNkLElBQUksQ0FBQyxPQUFPLENBQUM7WUFDWCxVQUFVLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxPQUFPLENBQUMsR0FBRztTQUNqQyxDQUFDLENBQUE7SUFDSixDQUFDO0lBRUQsU0FBUyxZQUFDLENBQUs7UUFDYixPQUFPLENBQUMsR0FBRyxDQUFDLE9BQU8sRUFBRSxDQUFDLENBQUMsQ0FBQTtRQUN2QixJQUFJLENBQUMsT0FBTyxDQUFDO1lBQ1gsU0FBUyxFQUFFLElBQUk7U0FDaEIsQ0FBQyxDQUFBO0lBQ0osQ0FBQztDQUNGLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIi8vIGNvbnN0IGFwcCA9IGdldEFwcDxJQXBwT3B0aW9uPigpO1xyXG5cclxuUGFnZSh7XHJcbiAgZGF0YToge1xyXG4gICAgY3VycmVudFRhYjogJ2FsbCcsIC8vIOWFqOmDqGFsbCDlvoXlj5HotKd1bnNlbmQg5bey5Y+R6LSnIHNlbmRlZFxyXG4gICAgdHJpZ2dlcmVkOiBmYWxzZSxcclxuICAgIG9yZGVyTGlzdDogW1xyXG4gICAgICB7IG5hbWU6ICflj7Dmub7msLTku5noipInLCBwaWM6ICcuLi8uLi9zdGF0aWMvb3JkZXIvb3JkZXItaW1nLnBuZycsIHVuaXQ6ICc1S0cv566xJywgbnVtOiAyLCBwcmljZTogJzIwMDAnLCBzdGF0dXM6ICflvoXlj5HotKcnIH0sXHJcbiAgICAgIHsgbmFtZTogJ+WPsOa5vuawtOS7meiKkicsIHBpYzogJy4uLy4uL3N0YXRpYy9vcmRlci9vcmRlci1pbWcucG5nJywgdW5pdDogJzVLRy/nrrEnLCBudW06IDIsIHByaWNlOiAnMjAwMCcsIHN0YXR1czogJ+W+heWPkei0pycgfSxcclxuICAgICAgeyBuYW1lOiAn5Y+w5rm+5rC05LuZ6IqSJywgcGljOiAnLi4vLi4vc3RhdGljL29yZGVyL29yZGVyLWltZy5wbmcnLCB1bml0OiAnNUtHL+eusScsIG51bTogMiwgcHJpY2U6ICcyMDAwJywgc3RhdHVzOiAn5b6F5Y+R6LSnJyB9LFxyXG4gICAgICB7IG5hbWU6ICflj7Dmub7msLTku5noipInLCBwaWM6ICcuLi8uLi9zdGF0aWMvb3JkZXIvb3JkZXItaW1nLnBuZycsIHVuaXQ6ICc1S0cv566xJywgbnVtOiAyLCBwcmljZTogJzIwMDAnLCBzdGF0dXM6ICflvoXlj5HotKcnIH0sXHJcbiAgICAgIHsgbmFtZTogJ+WPsOa5vuawtOS7meiKkicsIHBpYzogJy4uLy4uL3N0YXRpYy9vcmRlci9vcmRlci1pbWcucG5nJywgdW5pdDogJzVLRy/nrrEnLCBudW06IDIsIHByaWNlOiAnMjAwMCcsIHN0YXR1czogJ+W+heWPkei0pycgfSxcclxuICAgICAgeyBuYW1lOiAn5Y+w5rm+5rC05LuZ6IqSJywgcGljOiAnLi4vLi4vc3RhdGljL29yZGVyL29yZGVyLWltZy5wbmcnLCB1bml0OiAnNUtHL+eusScsIG51bTogMiwgcHJpY2U6ICcyMDAwJywgc3RhdHVzOiAn5b6F5Y+R6LSnJyB9LFxyXG4gICAgICB7IG5hbWU6ICflj7Dmub7msLTku5noipInLCBwaWM6ICcuLi8uLi9zdGF0aWMvb3JkZXIvb3JkZXItaW1nLnBuZycsIHVuaXQ6ICc1S0cv566xJywgbnVtOiAyLCBwcmljZTogJzIwMDAnLCBzdGF0dXM6ICflvoXlj5HotKcnIH1cclxuICAgIF1cclxuICB9LFxyXG4gIC8vIOWIh+aNonRhYlxyXG4gIGNoYW5nZVRhYihlOiBhbnkpIHtcclxuICAgIHRoaXMuc2V0RGF0YSh7XHJcbiAgICAgIGN1cnJlbnRUYWI6IGUudGFyZ2V0LmRhdGFzZXQudGFiXHJcbiAgICB9KVxyXG4gIH0sXHJcbiAgLy8g5LiL5ouJ5Yi35pawXHJcbiAgcHVsbEZyZXNoKGU6YW55KSB7XHJcbiAgICBjb25zb2xlLmxvZyhcIuS4i+aLiT4+PlwiLCBlKVxyXG4gICAgdGhpcy5zZXREYXRhKHtcclxuICAgICAgdHJpZ2dlcmVkOiB0cnVlXHJcbiAgICB9KVxyXG4gIH1cclxufSkiXX0=

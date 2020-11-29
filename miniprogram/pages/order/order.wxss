@@ -1,1 +1,74 @@
-/* miniprogram/pages/order.wxss */
+/* 订单tab */
+.order-tab {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+}
+.order-tab view {
+  flex: 1;
+  color: #999;
+  font-weight: 28rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+.order-tab view.active {
+  border-bottom: 2rpx solid #10bfc7;
+}
+
+/* 订单列表 */
+.order-list {
+  height: calc(100% - 88rpx);
+}
+.order-list .order-con {
+  width: 100%;
+  height: 360rpx;
+  border-top: 1rpx solid #efefef;
+  border-bottom: 1rpx solid #efefef;
+  background: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.order-con .info {
+  flex: 1;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+.order-con .info .img {
+  width: 192rpx;
+  height: 192rpx;
+  border: 1px solid #efefef;
+  margin-right: 35rpx;
+}
+.order-con .info .des .name {
+  color: #333;
+  font-size: 32rpx;
+}
+.order-con .info .des .price {
+  color: #333;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.order-con .info .des .price text {
+  color: #ff9933;
+  font-size: 36rpx;
+}
+.order-con .info .des .num {
+  color: #999;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+.order-con .state {
+  height: 88rpx;
+  border-top: 1rpx solid #efefef;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-con .state text {
+  color: #666;
+  font-size: 26rpx;
+}

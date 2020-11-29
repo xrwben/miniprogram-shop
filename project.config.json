@@ -5,7 +5,7 @@
   },
   "miniprogramRoot": "miniprogram/",
   "compileType": "miniprogram",
-  "libVersion": "2.8.2",
+  "libVersion": "2.10.1",
   "projectname": "mini-shop",
   "scripts": {
     "beforeCompile": "npm run tsc",
@@ -61,8 +61,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
           "scene": null
         }
       ]
