@@ -12,7 +12,12 @@ Page({
       { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
       { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' },
       { name: '台湾水仙芒', pic: '../../static/order/order-img.png', unit: '5KG/箱', num: 2, price: '2000', status: '待发货' }
-    ]
+    ],
+    defaultTips: {
+      all: '您还没有订单，赶紧下单吧~',
+      unsend: '您没有待发货的订单~',
+      sended: '您没有已发货的订单~'
+    }
   },
   // 切换tab
   changeTab(e: any) {

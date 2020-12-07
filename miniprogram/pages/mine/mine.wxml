@@ -1,0 +1,23 @@
+<!-- 我的 -->
+<view class="mine-info">
+  <image class="avatar" src="../../static/home/past-img-5.png"></image>
+  <view class="name">一个没有感情的杀手</view>
+</view>
+<view class="list-con">
+  <view class="list-item">
+    <text>积分规则</text>
+    <image class="arrow" src="../../static/mine/arrow.png"></image>
+  </view>
+  <view class="list-item">
+    <text>我的地址</text>
+    <image class="arrow" src="../../static/mine/arrow.png"></image>
+  </view>
+  <view class="list-item">
+    <text>联系客服</text>
+    <image class="arrow" src="../../static/mine/arrow.png"></image>
+  </view>
+  <view class="list-item">
+    <text>设置</text>
+    <image class="arrow" src="../../static/mine/arrow.png"></image>
+  </view>
+</view>

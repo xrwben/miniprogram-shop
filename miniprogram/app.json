@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/order/order",
+    "pages/mine/mine",
     "pages/logs/logs",
-    "pages/order/order"
+    "pages/details/details"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -28,7 +30,7 @@
         "text": "订单"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/mine/mine",
         "iconPath": "./static/tab/mine-gray.png",
         "selectedIconPath": "./static/tab/mine-normal.png",
         "text": "我的"

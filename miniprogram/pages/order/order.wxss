@@ -72,3 +72,17 @@
   color: #666;
   font-size: 26rpx;
 }
+.default-bg {
+  padding-top: 200rpx;
+}
+.default-bg .img {
+  width: 430rpx;
+  height: 265rpx;
+  display: block;
+  margin: 0 auto;
+}
+.default-bg .tip {
+  color: #666;
+  font-size: 26rpx;
+  text-align: center;
+}

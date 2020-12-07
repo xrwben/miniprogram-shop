@@ -13,7 +13,7 @@
   refresher-background="#eee"
   refresher-triggered="{{triggered}}"
   bindrefresherrefresh="pullFresh">
-  <view class="order-con" wx:for="{{ orderList }}" wx:key="index">
+  <view class="order-con" wx:if="{{orderList.length}}" wx:for="{{ orderList }}" wx:key="index">
     <view class="info">
       <image class="img" src="{{ item.pic }}"></image>
       <view class="des">
@@ -26,5 +26,9 @@
       <text>状态：{{ item.status }}</text>
       <text>合计：￥{{ item.price * item.num }}</text>
     </view>
+  </view>
+  <view class="default-bg" wx:if="{{!orderList.length}}">
+    <image class="img" src="../../static/order/default-img.png"></image>
+    <view class="tip">{{defaultTips[currentTab]}}</view>
   </view>
 </scroll-view>

@@ -1,0 +1,25 @@
+<!-- 轮播图 -->
+<swiper class="swiper-container" indicator-dots="true" indicator-color="rgba(255, 225, 255, 0.5)" indicator-active-color="#0dbfc4" autoplay="true">
+  <swiper-item class="swiper-item" wx:for="{{ imgList }}" wx:key="index">
+    <image src="{{ item }}"></image>
+  </swiper-item>
+</swiper>
+<view class="info-block">
+  <view class="name clearfix">台湾水仙芒 5KG</view>
+  <view class="des clearfix">"最好吃最营养的芒果，空气里都是甜甜的香气"</view>
+  <view class="price">
+    <text>￥200.00</text>
+    <text>今日剩余：50</text>
+  </view>
+</view>
+<!-- 农户说 -->
+<view class="audio-container">
+  <image class="avatar" src="../../static/details/avatar.png"></image>
+  <view class="audio">
+    <image class="bg" src="../../static/details/audio-bg.png"></image>
+    <text class="time">31"</text>
+    <text class="tip">点击播放语音</text>
+  </view>
+</view>
+<!-- 商品详情 -->
+<view class="details"></view>
