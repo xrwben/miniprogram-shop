@@ -22,4 +22,34 @@
   </view>
 </view>
 <!-- 商品详情 -->
-<view class="details"></view>
+<view class="module-details">
+  <view class="title">商品详情</view>
+  <view class="content">
+    <image class="img" src="../../static/details/details.png"></image>
+  </view>
+</view>
+<!-- 基本信息 -->
+<view class="module-info">
+  <view class="title">基本信息</view>
+  <view class="ul">
+    <view class="li">场地：<text>台湾</text></view>
+    <view class="li">规格：<text>5KG/箱</text></view>
+    <view class="li">发货时间：<text>2天内发货</text></view>
+    <view class="li">配送范围：<text>除新疆、西藏、黑龙江、辽宁、吉林</text></view>
+  </view>
+</view>
+<!-- 兑换须知 -->
+<view class="module-notice">
+  <view class="title">兑换须知</view>
+  <view class="notice">4月底至5月上旬成熟，果实呈尖宽卵形，稍扁，单果重150-200克。完熟的果实黄色，近果肩半部长带胭脂红色，外观美丽。果肉深黄色，组织较细密，味甜，纤维少，质地较细滑，品质好。</view>
+</view>
+<!-- 其它推荐 -->
+<view class="module-recommend">
+  <view class="title">其它推荐</view>
+  <view class="img">
+    <image src="../../static/details/recommed.png"></image>
+    <image src="../../static/details/recommed.png"></image>
+  </view>
+</view>
+<!-- 购买按钮 -->
+<view class="btn-purchase">立即兑换</view>
